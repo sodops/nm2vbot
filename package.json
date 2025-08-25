@@ -12,12 +12,8 @@
   "author": "Sodiq (@sodops)",
   "license": "MIT",
   "dependencies": {
-     "express": "^4.18.2",
-    "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@telegraf/session": "^2.0.0-beta.7",
-    "@types/ffmpeg-static": "^3.0.1",
+    "express": "^4.18.2",
     "dotenv": "^16.1.4",
-    "ffmpeg-static": "^5.1.0",
     "fluent-ffmpeg": "^2.1.2",
     "grammy": "^1.16.1",
     "undici": "^6.6.0",

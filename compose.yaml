@@ -7,3 +7,4 @@ services:
       TOKEN: ${TOKEN}
       BOT_OWNER_ID: ${BOT_OWNER_ID}
       MONGODB_URI: ${MONGODB_URI}
+      PORT: ${PORT:-3000}
