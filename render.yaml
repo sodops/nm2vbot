@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: nm2vbot
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TOKEN
+        sync: false
+      - key: BOT_OWNER_ID
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 10000

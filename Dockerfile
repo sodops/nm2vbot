@@ -13,6 +13,8 @@ FROM node:${NODE_VERSION}-alpine
 # Use production node environment by default.
 ENV NODE_ENV production
 
+# Install FFmpeg
+RUN apk add --no-cache ffmpeg
 
 WORKDIR /usr/src/app
 

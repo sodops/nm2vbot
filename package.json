@@ -9,7 +9,7 @@
     "dev": "ts-node-dev ./bot.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Egor Becker & ChatGPT",
+  "author": "Sodiq (@sodops)",
   "license": "MIT",
   "dependencies": {
      "express": "^4.18.2",
