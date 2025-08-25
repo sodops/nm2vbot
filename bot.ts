@@ -14,15 +14,18 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
-app.get("/", (req: any, res: any) => {
-    res.send("Audio to Voice Converter Bot is running!");
-});
+// Express server faqat PORT o'rnatilgan bo'lsa ishga tushadi (web deployment uchun)
+if (PORT) {
+    app.get("/", (req: any, res: any) => {
+        res.send("Audio to Voice Converter Bot is running!");
+    });
 
-app.listen(PORT, () => {
-    console.log(`Server portda tinglanmoqda: ${PORT}`);
-});
+    app.listen(PORT, () => {
+        console.log(`Server portda tinglanmoqda: ${PORT}`);
+    });
+}
 
 const pipelineAsync = promisify(pipeline);
 const MAX_DURATION = 60; // 60 soniya

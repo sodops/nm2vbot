@@ -1,10 +1,10 @@
 services:
-  - type: web
+  - type: worker
     name: nm2vbot
     runtime: node
     plan: free
     buildCommand: npm install && npm run build
-    startCommand: npm start
+    startCommand: node dist/bot.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -14,5 +14,3 @@ services:
         sync: false
       - key: MONGODB_URI
         sync: false
-      - key: PORT
-        value: 10000
